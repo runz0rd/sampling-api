@@ -1,0 +1,5 @@
+set -e
+
+i2cdetect 1
+i2cset -y 1 0x60 0x40 0xff 0xf0 i
+python server.py
